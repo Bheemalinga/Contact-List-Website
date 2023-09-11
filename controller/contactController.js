@@ -30,3 +30,16 @@ exports.getAllData = async(req, res) => {
         res.redirect('back');
     }
 }
+
+
+exports.deleteContact = async(req,res) => {
+    try {
+        let id = req.query.id;
+        const deleted = await Contact.findByIdAndDelete(id);
+        console.log('Contact deleted',deleted);
+        return res.redirect('back');
+    }catch (error) {
+        console.log('error in deleting contact',error);
+        return res.redirect('back');
+    }
+}

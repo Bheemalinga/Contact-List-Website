@@ -1,7 +1,7 @@
 const express = require('express');
 // importing path
 const path = require('path');
-const port = 8000;
+const port = 8080;
 const app = express();
 const db = require('./config/db');
 const Contact = require('./models/contact');

@@ -11,5 +11,5 @@ const contactSchema = new mongoose.Schema({ // creating schema
            }
 });
 
-const Contact = mongoose.model('Contact', contactSchema);
-module.exports = Contact;
+const Contact = mongoose.model('Contact', contactSchema); // creating model
+module.exports = Contact; // exporting model

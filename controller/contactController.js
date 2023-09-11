@@ -15,3 +15,18 @@ exports.ContactRegistered = async(req, res) => {
 exports.getAllData = function(req, res){
     return res.render('contact')
 }
+
+exports.getAllData = async(req, res) => {
+    try {
+        const contacts = await Contact.find({}).exec();
+
+        res.render('contact',{
+            title: "Contact List",
+            contact_lists: contacts
+        })
+    }
+    catch (error) {
+        console.log('error in fetching contacts data from database');
+        res.redirect('back');
+    }
+}

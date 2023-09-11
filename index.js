@@ -14,9 +14,7 @@ app.use(express.urlencoded());
 app.use('/',contactRouter);
 
 app.get('/', function(req, res){
-    return res.render('contact', {
-        title:"this is my project"
-    })
+    return res.render('contact')
 })
 
 app.listen(port, function(err){

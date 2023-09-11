@@ -1,16 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // importing mongoose
 
-const contactSchema = new mongoose.Schema({
+const contactSchema = new mongoose.Schema({ // creating schema
     name : {
         type: String,
         required: true
-    },
-    phone:{
-        phone: {
+           },
+    phone: {
             type: Number,
             required: true
-        }
-    }
+           }
 });
 
 const Contact = mongoose.model('Contact', contactSchema);

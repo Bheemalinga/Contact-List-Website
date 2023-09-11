@@ -1,6 +1,10 @@
 <html>
     <head>
 
+        <title>
+
+        </title>
+        <!-- add the css file afterwards -->
     </head>
     <body>
 
@@ -12,5 +16,19 @@
             <input type = "text" name = "phone" placeholder="Enter Phone Number">
             <button type = "submit">Add Contact</button>
         </form>
+        <div>
+            <ul>
+                <%for(let i of contact_lists){%>
+                    <li>
+                        <p><%=i.name%></p>  
+                        <p><%=i.phone%></p>
+                        <a href = "/delete-contact/?id=<%=i._id%>">
+                            <button>delete</button>
+                        </a>
+                    </li>
+                <%}%>
+            </ul>
+        </div>
+
     </body>
 </html>

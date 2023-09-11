@@ -1,3 +1,12 @@
+
+
+<!-- In MVC structure, the View is responsible for presenting the data to the user  -->
+<!-- Thus, the HTML parts are made here in the views through the ejs extensions -->
+<!-- Where EJS - Embedded JavaScript refers to template file of HTML that has EJS code  -->
+<!-- templates are used to generate dynamic HTML content
+     on the server-side before sending it to the client's web browser. -->
+     <!-- usage --   {   <%=   %>   }       -->
+
 <html>
     <head>
 
@@ -11,11 +20,12 @@
         <h1>
             My Contact List
         </h1>
-        <form action = "/create-contact" method = "POST">
-            <input type = "text" name = "name" placeholder = "Enter Name">
-            <input type = "text" name = "phone" placeholder="Enter Phone Number">
-            <button type = "submit">Add Contact</button>
-        </form>
+            <form action = "/create-contact" method = "POST"> 
+                <!-- action is the url where the form is submitted and method is used to send data to the server in the HTTP request body -->
+                <input type = "text" name = "name" placeholder = "Enter Name">
+                <input type = "text" name = "phone" placeholder="Enter Phone Number">
+                <button type = "submit">Add Contact</button>
+            </form>
         <div>
             <ul>
                 <%for(let i of contact_lists){%>

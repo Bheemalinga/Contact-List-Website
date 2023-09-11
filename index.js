@@ -1,6 +1,6 @@
 const express = require('express'); // importing express
 // importing path
-const path = require('path');
+const path = require('path'); // importing path for setting views directory
 const port = 8080; // port number
 const app = express(); // creating express instance
 const db = require('./config/db'); // importing database

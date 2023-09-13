@@ -3,7 +3,7 @@ const validateContactData = (req, res,next) => {
     // if(name.length < 2 || phone.length < 10){
     //     return res.status(400).json({error:'Invalid contact});
     // }
-    // else if(!name.include('@)){
+    // else if(!name.include('@')){
     //    return res.status(400).json({error:'Invalid contact'});
     // }
     if(phone.value === null)

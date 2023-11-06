@@ -1,8 +1,8 @@
 const mongoose = require('mongoose'); // importing the mongoose module
 
 // Below line copied from the mongoDB website, connecting to the database
-// mongodb+srv://bmax9567:<password>@cluster0.vwuysw7.mongodb.net/
-mongoose.connect('mongodb+srv://bmax9567:max9567@cluster0.vwuysw7.mongodb.net/')
+// mongodb+srv://<username>:<password>@cluster0.vwuysw7.mongodb.net/ should be present in the below connect paranthesis
+mongoose.connect()
 
 const db = mongoose.connection; // creating the connection
 
